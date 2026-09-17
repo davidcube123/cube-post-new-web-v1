@@ -1,0 +1,8 @@
+node_modules/
+.next/
+.next-dev/
+out/
+review-output/
+*.tsbuildinfo
+.env*
+.DS_Store
