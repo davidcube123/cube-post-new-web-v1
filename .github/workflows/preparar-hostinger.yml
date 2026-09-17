@@ -1,0 +1,54 @@
+name: Preparar web para Hostinger
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: cube-hostinger
+  cancel-in-progress: false
+jobs:
+  preparar:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+      - name: Comprobar exportacion
+        run: |
+          test -s out/index.html
+          test -s out/trabajos/index.html
+          test -s out/espacios/index.html
+          test -s out/equipo/index.html
+          test -s out/.htaccess
+      - name: Actualizar solo la rama hostinger
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          target="$RUNNER_TEMP/cube-hostinger-output"
+          git worktree add --detach "$target" HEAD
+          cd "$target"
+          if git show-ref --verify --quiet refs/remotes/origin/hostinger; then
+            git checkout -B hostinger origin/hostinger
+          else
+            git checkout --orphan hostinger
+          fi
+          git rm -rf --ignore-unmatch .
+          cp -a "$GITHUB_WORKSPACE/out/." .
+          touch .nojekyll
+          git add --all
+          if git diff --cached --quiet; then
+            echo "Sin cambios en la web preparada."
+          else
+            git commit -m "Preparar web desde $GITHUB_SHA"
+          fi
+          git push origin HEAD:hostinger

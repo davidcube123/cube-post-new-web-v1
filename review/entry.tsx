@@ -1,0 +1,17 @@
+import React,{useState,useEffect} from 'react';
+import {createRoot} from 'react-dom/client';
+import {RouteContext} from './navigation';
+import {LanguageProvider} from '../src/lib/i18n';
+import {Header} from '../src/components/Header';
+import {Footer} from '../src/components/Footer';
+import Home from '../src/app/page';
+import Works from '../src/app/trabajos/page';
+import Services from '../src/app/servicios/page';
+import Spaces from '../src/app/espacios/page';
+import Team from '../src/app/equipo/page';
+import Contact from '../src/app/contacto/page';
+import Privacy from '../src/app/privacy-policy/page';
+import Terms from '../src/app/condiciones-generales-de-venta/page';
+const routes:Record<string,React.ComponentType>={'/':Home,'/trabajos':Works,'/servicios':Services,'/espacios':Spaces,'/equipo':Team,'/contacto':Contact,'/privacy-policy':Privacy,'/condiciones-generales-de-venta':Terms};
+function App(){const [path,setPath]=useState(location.hash.slice(1)||'/');useEffect(()=>{const change=()=>{const route=location.hash.slice(1)||'/';if(routes[route.split("?")[0]]){setPath(route);window.scrollTo(0,0)}};window.addEventListener('hashchange',change);return()=>window.removeEventListener('hashchange',change)},[]);const Page=routes[path.split("?")[0]]||Home;return <RouteContext.Provider value={path.split("?")[0]}><LanguageProvider><Header/><main id="contenido" className="site-main"><Page key={path}/></main><Footer/></LanguageProvider></RouteContext.Provider>};
+createRoot(document.getElementById('root')!).render(<App/>);
