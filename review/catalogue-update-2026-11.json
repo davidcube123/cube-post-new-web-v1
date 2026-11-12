@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-11",
+  "yearsAndCredits": "Supplied by CUBE; years retained, not inferred from festival dates",
+  "newTitles": [
+    {
+      "title": "La dona invisible",
+      "year": 2027,
+      "yearSource": "Alta facilitada por CUBE — noviembre de 2026",
+      "director": "Cristina Fernandez",
+      "dop": "Miguel Llorens",
+      "imdbUrl": "https://www.imdb.com/title/tt43649119/",
+      "omdbTitle": "La dona invisible",
+      "poster": "",
+      "imageKind": "pending"
+    },
+    {
+      "title": "Monitor",
+      "year": 2026,
+      "yearSource": "Alta facilitada por CUBE — noviembre de 2026",
+      "director": "Matt Black & Ryan Polly",
+      "dop": "Philip Lozano",
+      "imdbUrl": "https://www.imdb.com/title/tt34383418/",
+      "omdbTitle": "Monitor",
+      "poster": "/catalogue/update-2026-11-monitor.jpg",
+      "posterFit": "contain"
+    },
+    {
+      "title": "Rule of Three",
+      "year": 2027,
+      "yearSource": "Alta facilitada por CUBE — noviembre de 2026",
+      "director": "James Roday",
+      "dop": "Rita Noriega",
+      "imdbUrl": "https://www.imdb.com/title/tt27427462/",
+      "omdbTitle": "Rule of Three",
+      "poster": "",
+      "imageKind": "pending"
+    },
+    {
+      "title": "Found Alive",
+      "year": 2026,
+      "yearSource": "Alta facilitada por CUBE — noviembre de 2026",
+      "director": "Carlota Pereda",
+      "dop": "Rita Noriega",
+      "imdbUrl": "https://www.imdb.com/title/tt4864632/",
+      "omdbTitle": "Found Alive",
+      "poster": "/catalogue/update-2026-11-found.jpg",
+      "imageKind": "publicity"
+    }
+  ],
+  "images": [
+    {
+      "title": "Monitor",
+      "source": "https://cabaneasang.tv/film/monitor-2026/",
+      "status": "Teaser poster visually checked"
+    },
+    {
+      "title": "En nombre de otro",
+      "source": "https://www.sensacine.com/peliculas/pelicula-1000039161/",
+      "status": "Poster replaces publicity still"
+    },
+    {
+      "title": "Gènesi",
+      "source": "https://www.sensacine.com/series/serie-1000003956/",
+      "status": "Poster replaces publicity still"
+    },
+    {
+      "title": "Found Alive",
+      "source": "https://www.sensacine.com/peliculas/pelicula-1000021319/",
+      "status": "Publicity still, labelled; no verified poster found"
+    },
+    {
+      "title": "Más allá de la sociedad",
+      "status": "Existing labelled publicity still retained; no verified poster found"
+    },
+    {
+      "title": "Rule of Three",
+      "status": "No verified poster; Filmow image rejected as book cover"
+    },
+    {
+      "title": "La dona invisible",
+      "status": "No verified poster; generic placeholders rejected"
+    }
+  ],
+  "luts": "None supplied; no LUT association added"
+}

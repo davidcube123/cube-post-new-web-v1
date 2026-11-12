@@ -157,3 +157,8 @@ body{font-weight:400}p{color:#424550}h1{font-weight:400}h2,h3{font-weight:350}.e
 @keyframes reel-drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(hover:none),(prefers-reduced-motion:reduce){.reel-window{overflow-x:auto;scroll-snap-type:x proximity}.reel-track{animation:none}.reel-set[aria-hidden]{display:none}.reel-poster{scroll-snap-align:start}}
 @media(max-width:600px){.reel-poster{width:122px;flex-basis:122px}.reel-poster .poster,.reel-poster .publicity-card{width:122px;height:180px}.reel-set{gap:12px;padding-right:12px}.year-reels{gap:24px}.home-work .archive-tools{align-items:stretch}.home-work .search-label{min-width:0;width:100%}}
+
+/* Small new-year collections remain readable without empty marquee loops. */
+.reel-short .reel-track{animation:none}.reel-short .reel-set[aria-hidden]{display:none}.reel-short .reel-window{overflow-x:auto}
+.reel-poster .poster-fallback{width:148px;height:218px;aspect-ratio:auto;border-radius:5px;padding:14px}.reel-poster .poster-fallback strong{font-size:21px;overflow-wrap:anywhere}.poster-fallback small{font-size:11px;font-weight:400}
+@media(max-width:600px){.reel-poster .poster-fallback{width:122px;height:180px;padding:10px}.reel-poster .poster-fallback strong{font-size:18px}}
