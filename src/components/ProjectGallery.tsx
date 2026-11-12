@@ -14,10 +14,11 @@ export function Poster({
       <div><span>{language === "es" ? "Imagen promocional" : "Publicity image"}</span><strong>{project.title}</strong></div>
     </div>
   );
-  return failed ? (
+  return failed || !project.poster || project.imageKind === "pending" ? (
     <div className="poster-fallback">
       <span>CUBE Post</span>
       <strong>{project.title}</strong>
+      {project.imageKind === "pending" && <small>{language === "es" ? "Cartel pendiente" : "Poster pending"}</small>}
     </div>
   ) : (
     <img
@@ -111,7 +112,7 @@ export function ProjectGallery({ featured = false, carousel = false }: { feature
       {carousel && !query.trim() ? <div className={`year-reels${paused || selected ? " is-paused" : ""}`}>
         {years.map((year, index) => {
           const films = projects.filter(p => p.year === year);
-          return <section className={`year-reel ${index % 2 ? "reel-left" : "reel-right"}`} key={year} aria-label={`${es ? "Trabajos" : "Works"} ${year}`}>
+          return <section className={`year-reel ${films.length < 8 ? "reel-short" : ""} ${index % 2 ? "reel-left" : "reel-right"}`} key={year} aria-label={`${es ? "Trabajos" : "Works"} ${year}`}>
             <div className="reel-heading"><h3>{year}</h3><span>{films.length} {es ? "trabajos" : "works"}</span></div>
             <div className="reel-window"><div className="reel-track" style={{"--reel-time": `${films.length * 7}s`} as CSSProperties}>
               {[0, 1].map(copy => <div className="reel-set" key={copy} aria-hidden={copy === 1 ? true : undefined}>

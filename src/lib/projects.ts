@@ -12,9 +12,53 @@ export interface Project {
   imdbUrl?: string;
   searchAliases?: string[];
   posterFit?: "contain";
-  imageKind?: "publicity";
+  imageKind?: "publicity" | "pending";
 }
 export const projects: Project[] = [
+{
+  "title": "La dona invisible",
+  "year": 2027,
+  "yearSource": "Alta facilitada por CUBE — noviembre de 2026",
+  "director": "Cristina Fernandez",
+  "dop": "Miguel Llorens",
+  "imdbUrl": "https://www.imdb.com/title/tt43649119/",
+  "omdbTitle": "La dona invisible",
+  "poster": "",
+  "imageKind": "pending"
+},
+{
+  "title": "Monitor",
+  "year": 2026,
+  "yearSource": "Alta facilitada por CUBE — noviembre de 2026",
+  "director": "Matt Black & Ryan Polly",
+  "dop": "Philip Lozano",
+  "imdbUrl": "https://www.imdb.com/title/tt34383418/",
+  "omdbTitle": "Monitor",
+  "poster": "/catalogue/update-2026-11-monitor.jpg",
+  "posterFit": "contain"
+},
+{
+  "title": "Rule of Three",
+  "year": 2027,
+  "yearSource": "Alta facilitada por CUBE — noviembre de 2026",
+  "director": "James Roday",
+  "dop": "Rita Noriega",
+  "imdbUrl": "https://www.imdb.com/title/tt27427462/",
+  "omdbTitle": "Rule of Three",
+  "poster": "",
+  "imageKind": "pending"
+},
+{
+  "title": "Found Alive",
+  "year": 2026,
+  "yearSource": "Alta facilitada por CUBE — noviembre de 2026",
+  "director": "Carlota Pereda",
+  "dop": "Rita Noriega",
+  "imdbUrl": "https://www.imdb.com/title/tt4864632/",
+  "omdbTitle": "Found Alive",
+  "poster": "/catalogue/update-2026-11-found.jpg",
+  "imageKind": "publicity"
+},
   // Additional title supplied by CUBE.
 {
   "title": "53 domingos",
@@ -143,27 +187,25 @@ export const projects: Project[] = [
   "title": "En nombre de otro",
   "year": 2026,
   "yearSource": "titulos Web.xlsx — clasificación facilitada por CUBE",
-  "poster": "/catalogue/update-2026-nombre.jpg",
+  "poster": "/catalogue/update-2026-11-nombre.jpg",
   "director": "Oriol Paulo",
   "omdbTitle": "En nombre de otro",
   "featured": true,
   "posterFit": "contain",
   "dop": "Bernat Bosch",
-  "imdbUrl": "https://www.imdb.com/title/tt38973703/",
-  "imageKind": "publicity"
+  "imdbUrl": "https://www.imdb.com/title/tt38973703/"
 },
 {
   "title": "Génesis",
   "year": 2026,
   "yearSource": "titulos Web.xlsx — clasificación facilitada por CUBE",
-  "poster": "/catalogue/update-2026-genesis.jpg",
+  "poster": "/catalogue/update-2026-11-genesi.jpg",
   "director": "David Pujol",
   "omdbTitle": "Génesis",
   "featured": true,
   "posterFit": "contain",
   "dop": "Roman Martinez de Bujo",
   "imdbUrl": "https://www.imdb.com/title/tt38483587/",
-  "imageKind": "publicity",
   "searchAliases": [
     "Gènesi"
   ]
