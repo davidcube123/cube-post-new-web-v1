@@ -100,6 +100,7 @@ interface Translations {
     legal: string;
     privacy: string;
     terms: string;
+    nativeProjects: string;
     copyright: string;
   };
 }
@@ -225,6 +226,7 @@ const translations: Record<Language, Translations> = {
       legal: "Legal",
       privacy: "Política de Privacidad",
       terms: "Condiciones generales de venta",
+      nativeProjects: "Protección de proyectos nativos",
       copyright: "Cube Post. Postproducción de imagen en Barcelona.",
     },
   },
@@ -348,6 +350,7 @@ const translations: Record<Language, Translations> = {
       legal: "Legal",
       privacy: "Privacy Policy",
       terms: "Terms and Conditions",
+      nativeProjects: "Native project protection",
       copyright: "Cube Post. Image post-production in Barcelona.",
     },
   },
