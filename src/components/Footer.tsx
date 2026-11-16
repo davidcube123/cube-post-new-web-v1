@@ -37,6 +37,7 @@ export function Footer() {
         </a>
         <Link href="/privacy-policy">{t.footer.privacy}</Link>
         <Link href="/condiciones-generales-de-venta">{t.footer.terms}</Link>
+        <Link href="/proteccion-proyectos-nativos">{t.footer.nativeProjects}</Link>
       </div>
     </footer>
   );
